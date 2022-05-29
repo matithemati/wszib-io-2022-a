@@ -65,6 +65,10 @@ class Trojkaty {
         float a = Float.valueOf(args[0]);
         float b = Float.valueOf(args[1]);
         float c = Float.valueOf(args[2]);
+        if (a != a || b != b || c != c) {
+            System.out.println("Co najmniej jedna z podanych wartości nie jest wartością liczbową!");
+            System.exit(2);
+        }
         System.out.println("Parsing process complete.");
 
         if (a < 0 || b < 0 || c < 0) {
