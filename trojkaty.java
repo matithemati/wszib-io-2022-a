@@ -47,6 +47,7 @@ class Trojkaty {
         if (czyProstokatny(a, b, c)) {
           System.out.println("Trójkąt prostokątny");
         }
+        System.out.println("Trójkąt rozwartokątny lub ostrokątny, to zależy.");
     }
     /** Wyświetla ekran pomocy */
     public static void pomoc(){
@@ -72,9 +73,15 @@ class Trojkaty {
             pomoc();
             System.exit(1);
         }
+        System.out.println("Starting arg parsing process...");
         float a = Float.valueOf(args[0]);
         float b = Float.valueOf(args[1]);
         float c = Float.valueOf(args[2]);
+        if (a != a || b != b || c != c) {
+            System.out.println("Co najmniej jedna z podanych wartości nie jest wartością liczbową!");
+            System.exit(2);
+        }
+        System.out.println("Parsing process complete.");
 
         if (!czyIstniejeTrojkat(a, b, c)) {
             System.out.println("Z podanych długości boków nie da się zbudować trójkąta");
@@ -85,6 +92,7 @@ class Trojkaty {
             System.exit(2);
         }
 
+        System.out.println("Preliminary validation process complete, determining triangle type...");
         jakiTrojkat(a, b, c);
     }
 }
