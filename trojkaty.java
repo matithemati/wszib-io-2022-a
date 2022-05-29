@@ -60,15 +60,18 @@ class Trojkaty {
             pomoc();
             System.exit(1);
         }
+        System.out.println("Starting arg parsing process...");
         float a = Float.valueOf(args[0]);
         float b = Float.valueOf(args[1]);
         float c = Float.valueOf(args[2]);
+        System.out.println("Parsing process complete.");
 
         if (a < 0 || b < 0 || c < 0) {
             System.out.println("Długości boków trójkąta muszą być nieujemne!");
             System.exit(2);
         }
 
+        System.out.println("Preliminary validation process complete, determining triangle type...");
         jakiTrojkat(a, b, c);
     }
 }
