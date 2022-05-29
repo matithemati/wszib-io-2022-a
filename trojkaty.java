@@ -47,6 +47,7 @@ class Trojkaty {
         if (czyProstokatny(a, b, c)) {
           System.out.println("Trójkąt prostokątny");
         }
+        System.out.println("Trójkąt rozwartokątny");
     }
     /** Wyświetla ekran pomocy */
     public static void pomoc(){
